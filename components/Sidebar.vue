@@ -14,26 +14,37 @@
           </div>
           <div class="menu-wrapper mb-4 w-full border-t border-slate-400">
             <div :class="`${isExpanded ? 'ml-6' : 'ml-3'}`">
-                <NuxtLink class="flex flex-row justify-start items-center mt-8 cursor-pointer" to="/">
+              <UTooltip text="Home" class="flex mt-8">
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="/">
                     <span class="material-icons">home</span>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Home</span>
                 </NuxtLink>
-                <NuxtLink class="flex flex-row justify-start items-center mt-8 cursor-pointer">
+              </UTooltip>
+              <UTooltip text="Hobbies" class="flex mt-8">
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="hobbies">
                     <span class="material-icons">sports_esports</span>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Hobbies</span>
                 </NuxtLink>
-                <NuxtLink class="flex flex-row justify-start items-center mt-8 cursor-pointer">
+              </UTooltip>
+              <UTooltip text="Skills" class="flex mt-8">
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="skills">
                     <span class="material-icons">account_circle</span>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Skills</span>
                 </NuxtLink>
-                <NuxtLink class="flex flex-row justify-start items-center mt-8 cursor-pointer">
-                    <img src="../assets/content/icons8-discord-24.svg" class="w-6 h-6"/>
+              </UTooltip>
+              <UTooltip text="Contact" class="flex mt-8">
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="contact">
+                    <img v-if="!(currentRoute.name == 'contact')" src="../assets/content/icons8-discord-24.svg" class="w-6 h-6"/>
+                    <img v-if="(currentRoute.name == 'contact')" src="../assets/content/discord-mark-slate.svg" class="w-6 h-6"/>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Contact</span>
                 </NuxtLink>
+              </UTooltip>
+              <UTooltip text="GitHub">
                 <a class="flex flex-row justify-start items-center mt-8 cursor-pointer" href="https://github.com/NovicaPaunovski" target="_blank">
                     <img src="../assets/content/github-mark-white.svg" class="w-6 h-6"/>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">GitHub</span>
                 </a>
+              </UTooltip>
             </div>
           </div>
       </aside>
@@ -41,6 +52,8 @@
 
 <script setup lang="ts">
   const isExpanded = ref(false);
+
+  const { currentRoute } = useRouter();
 
   const toggleSidebar = () => {
     isExpanded.value = !isExpanded.value;
