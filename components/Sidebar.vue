@@ -20,16 +20,16 @@
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Home</span>
                 </NuxtLink>
               </UTooltip>
+              <UTooltip text="Skills" class="flex mt-8">
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="skills">
+                    <span class="material-icons">account_circle</span>
+                    <span v-if="isExpanded" class="font-bold text-lg ml-4">Experience</span>
+                </NuxtLink>
+              </UTooltip>
               <UTooltip text="Hobbies" class="flex mt-8">
                 <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="hobbies">
                     <span class="material-icons">sports_esports</span>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Hobbies</span>
-                </NuxtLink>
-              </UTooltip>
-              <UTooltip text="Skills" class="flex mt-8">
-                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="skills">
-                    <span class="material-icons">account_circle</span>
-                    <span v-if="isExpanded" class="font-bold text-lg ml-4">Skills</span>
                 </NuxtLink>
               </UTooltip>
               <UTooltip text="Contact" class="flex mt-8">
@@ -63,12 +63,6 @@
 <style scoped>
 .router-link-exact-active {
     color: rgb(148 163 184);
-  }
-
-  #body {
-    @media (max-width: 768px) {
-      padding-left: 6rem;
-    }
   }
 
   #sidebar {

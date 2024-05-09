@@ -6,3 +6,11 @@
       </div>
     </main>
 </template>
+
+<style scoped>
+  #body {
+    @media (max-width: 768px) {
+      padding-left: 6rem;
+    }
+  }
+</style>
