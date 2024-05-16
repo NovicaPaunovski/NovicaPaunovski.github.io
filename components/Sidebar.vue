@@ -33,9 +33,8 @@
                 </NuxtLink>
               </UTooltip>
               <UTooltip text="Contact" class="flex mt-8">
-                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="contact">
-                    <img v-if="!(currentRoute.name == 'contact')" src="../assets/content/icons8-discord-24.svg" class="w-6 h-6"/>
-                    <img v-if="(currentRoute.name == 'contact')" src="../assets/content/discord-mark-slate.svg" class="w-6 h-6"/>
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="hobbies">
+                    <span class="material-icons">call</span>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Contact</span>
                 </NuxtLink>
               </UTooltip>
