@@ -2,7 +2,7 @@
   <main class="flex flex-row min-w-screen min-h-screen">
       <Sidebar />
       <div id="body" class="w-full text-neutral-800">
-        <slot />
+        <slot /> 
       </div>
     </main>
 </template>

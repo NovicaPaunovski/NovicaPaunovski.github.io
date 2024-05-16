@@ -33,7 +33,7 @@
                 </NuxtLink>
               </UTooltip>
               <UTooltip text="Contact" class="flex mt-8">
-                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="hobbies">
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="contact">
                     <span class="material-icons">call</span>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Contact</span>
                 </NuxtLink>
