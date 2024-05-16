@@ -1,5 +1,5 @@
 <template>
-    <aside id="sidebar" :class="`${isExpanded ? 'is-expanded' : 'items-center'} sidebar flex flex-col min-h-screen bg-slate-800 text-slate-200 overflow-hidden p-4`">
+    <aside id="sidebar" :class="`${isExpanded ? 'is-expanded' : 'items-center'} sidebar flex flex-col min-h-screen bg-neutral-800 text-slate-200 overflow-hidden p-4`">
         <div class="logo mb-4 mt-2 flex flex-row justify-between items-center px-1">
             <img  class="w-12" src="../assets/content/novica-paunovski.png" alt="Vue">
             <span v-if="isExpanded" class="ml-4 font-bold text-lg mr-2 flex flex-col justify-start">Novica <span>Paunovski</span></span>
@@ -20,8 +20,8 @@
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Home</span>
                 </NuxtLink>
               </UTooltip>
-              <UTooltip text="Skills" class="flex mt-8">
-                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="skills">
+              <UTooltip text="Experience" class="flex mt-8">
+                <NuxtLink class="flex flex-row justify-start items-center cursor-pointer" to="experience">
                     <span class="material-icons">account_circle</span>
                     <span v-if="isExpanded" class="font-bold text-lg ml-4">Experience</span>
                 </NuxtLink>
